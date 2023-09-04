@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #081b29;
+    --main: #00abf0;
+    --text: #333;
+    --second: #555;
+    --cover: linear-gradient(45deg, #00abf0, #006e9a);
+    --page: linear-gradient(45deg, #fff, #ddd);
+    --bs: 0 0 0.6rem rgba(0, 0, 0, 0.2);
+  }
+}
+
+.cover-lg {
+  background: var(--cover);
+}
+
+.page-lg {
+  background: var(--page);
+}
+
+.bs {
+  box-shadow: var(--bs);
+}
+
+.rotate-y {
+  transform: rotateY(180deg);
+}
+
+.front {
+  transform: rotateY(0deg) translateZ(1px);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(1px);
+}
+
+.p-3d {
+  transform-style: preserve-3d;
+}
+
+.turn {
+  transform: rotateY(-180deg);
+}
+
+.flip {
+  transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.perspective {
+  perspective: 250rem;
+}
