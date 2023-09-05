@@ -1,12 +1,21 @@
 import { memo } from 'react'
+import { socials } from '../constants/data'
 
 function Profile() {
-  const socials = [
-    { id: 1, icon: <i className="bx bxl-facebook"></i> },
-    { id: 2, icon: <i className="bx bxl-twitter"></i> },
-    { id: 3, icon: <i className="bx bxl-linkedin"></i> },
-    { id: 4, icon: <i className="bx bxl-instagram"></i> },
-  ]
+  function handleContact() {
+    const pages = document.querySelectorAll('.page-turn')
+    pages.forEach((page, index) => {
+      setTimeout(
+        () => {
+          page.classList.add('turn')
+          setTimeout(() => {
+            if (page instanceof HTMLElement) page.style.zIndex = `${20 + index}`
+          }, 500)
+        },
+        (index + 1) * 200 + 100
+      )
+    })
+  }
 
   const socialJsx = socials.map((social) => (
     <a
@@ -27,16 +36,25 @@ function Profile() {
       />
       <div>
         <h1 className="text-5xl font-bold">Scottlee</h1>
-        <h3 className="text-3xl font-semibold text-main">Software Engineer</h3>
+        <h3 className="text-2xl font-semibold text-main">Software Engineer</h3>
       </div>
       <div className="flex gap-3">{socialJsx}</div>
       <p className="text-justify">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
         laudantium laborum, pariatur minima, molestiae facilis officiis sed
-        natus eaque esse reprehenderit blanditiis eius ex ut. Adipisci similique
-        impedit quisquam ratione, vel dolorem dolorum ab perspiciatis fugit
-        ullam cum quibusdam corrupti aperiam, .
+        natus eaque esse reprehenderit blanditiis eius ex ut.
       </p>
+      <div className="flex items-center justify-center gap-6">
+        <button className="border-2 border-main bg-main text-white hover:bg-transparent hover:text-main">
+          DownLoad CV
+        </button>
+        <button
+          onClick={handleContact}
+          className="border-2 border-main bg-transparent text-main hover:bg-main hover:text-white"
+        >
+          Contact Me
+        </button>
+      </div>
     </div>
   )
 }

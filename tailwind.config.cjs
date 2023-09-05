@@ -17,6 +17,15 @@ export default {
         second: 'var(--second)',
         main: 'var(--main)',
       },
+      animation: {
+        show: 'show 2s forwards',
+      },
+      keyframes: {
+        show: {
+          '0%,30%': { opacity: 0, transform: 'rotate(-20deg)' },
+          '100%': { opacity: 1, transform: 'rotate(0deg)' },
+        },
+      },
     },
   },
   plugins: [],

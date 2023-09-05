@@ -14,6 +14,24 @@
     --page: linear-gradient(45deg, #fff, #ddd);
     --bs: 0 0 0.6rem rgba(0, 0, 0, 0.2);
   }
+
+  button {
+    @apply rounded px-5 py-2 font-semibold transition;
+  }
+  h2 {
+    @apply text-center text-3xl font-bold;
+  }
+
+  h4 {
+    @apply text-xl font-semibold;
+  }
+  input {
+    @apply w-full rounded-md border-2 border-main p-3 focus:outline-none;
+  }
+
+  textarea {
+    @apply w-full rounded-md border-2 border-main p-3 focus:outline-none;
+  }
 }
 
 .cover-lg {
