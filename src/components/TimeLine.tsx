@@ -11,8 +11,9 @@ function TimeLine({ timelines, title }: Props) {
       key={timeLine.id}
       className={`relative border-l-2 border-main ${
         index + 1 !== timelines.length ? 'pb-6' : ''
-      } pl-4 before:absolute before:-left-[9px] before:top-0 before:h-4 before:w-4 before:rounded-full before:bg-main`}
+      } pl-4`}
     >
+      <span className="absolute -left-[9px] h-4 w-4 rounded-full bg-main"></span>
       <div className="text-main">
         <i className="bx bxs-calendar"></i>
         <span className="ml-3">{timeLine.duration}</span>
