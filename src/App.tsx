@@ -8,30 +8,30 @@ import Profile from './components/Profile'
 function App() {
   const [current, setCurrent] = useState(pages.length - 1)
 
-  const handleNext = (e: React.SyntheticEvent, pos: number) => {
+  const onNavigation = (
+    e: React.SyntheticEvent,
+    index: number,
+    pos: number
+  ) => {
     const button = e.target as HTMLElement
     const pageTurn = button?.parentElement?.parentElement?.parentElement
-    pageTurn?.classList.add('turn')
-    setTimeout(() => {
+    if (index === 0) {
       if (pageTurn) {
-        pageTurn.style.zIndex = `${20 + pos}`
+        pageTurn.classList.add('turn')
+        setTimeout(() => {
+          pageTurn.style.zIndex = `${20 + pos}`
+        }, 500)
       }
-    }, 500)
 
-    setCurrent((current + 1) % pages.length)
-  }
-
-  const handlePre = (e: React.SyntheticEvent, pos: number) => {
-    const button = e.target as HTMLElement
-    const pageTurn = button?.parentElement?.parentElement?.parentElement
-    if (pageTurn) {
-      pageTurn.classList.remove('turn')
-      setTimeout(() => {
-        pageTurn.style.zIndex = `${20 - pos}`
-      }, 500)
+      setCurrent((current + pages.length - 1) % pages.length)
+    } else {
+      if (pageTurn) {
+        pageTurn.classList.remove('turn')
+        setTimeout(() => {
+          pageTurn.style.zIndex = `${20 - pos}`
+        }, 500)
+      }
     }
-
-    setCurrent((current + pages.length - 1) % pages.length)
   }
 
   useEffect(() => {
@@ -83,11 +83,7 @@ function App() {
                     {item.key}
                   </span>
                   <button
-                    onClick={
-                      index === 0
-                        ? (e) => handleNext(e, item.key)
-                        : (e) => handlePre(e, item.key)
-                    }
+                    onClick={(e) => onNavigation(e, index, item.key)}
                     className={`absolute bottom-2 ${
                       index === 0 ? 'right-5' : 'left-5'
                     }`}
