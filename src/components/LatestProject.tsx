@@ -15,24 +15,33 @@ function LatestProject() {
 
         <div className=" flex items-center justify-between">
           <h4>Project Name</h4>
-          <a className="flex items-center gap-2 text-main">
+          <a
+            className="flex items-center gap-2 text-main"
+            href="https://scottlee0191.github.io/cv/"
+            target="_blank"
+          >
             Live Preview <i className="bx bx-link-external"></i>
           </a>
         </div>
         <div>
           <h6 className="font-bold">Tech Used:</h6>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt non
-            et totam.
-          </p>
+          <p>React, Vite, Html, Css,...</p>
         </div>
         <div className="flex items-center justify-center gap-6">
-          <button className="border-2 border-main bg-main text-white hover:bg-transparent hover:text-main">
+          <a
+            className="border-2 border-main bg-main p-2 text-white hover:bg-transparent hover:text-main"
+            href="https://github.com/scottlee0191/cv"
+            target="_blank"
+          >
             Source Code
-          </button>
-          <button className="border-2 border-main bg-transparent text-main hover:bg-main hover:text-white">
+          </a>
+          <a
+            className="border-2 border-main bg-transparent p-2 text-main hover:bg-main hover:text-white"
+            href="https://github.com/scottlee0191"
+            target="_blank"
+          >
             More Projects
-          </button>
+          </a>
         </div>
       </div>
     </div>
