@@ -8,7 +8,7 @@ function LatestProject() {
         <div className="overflow-hidden rounded-lg border-2 border-main hover:shadow-lg">
           <img
             className="transition hover:scale-105 "
-            src="/project.webp"
+            src="project.webp"
             alt="project"
           />
         </div>
