@@ -19,7 +19,8 @@ function Profile() {
 
   const socialJsx = socials.map((social) => (
     <a
-      href="#"
+      href={social.link}
+      target="_blank"
       className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-main text-xl text-main transition hover:bg-main hover:text-white"
       key={social.id}
     >
@@ -40,12 +41,16 @@ function Profile() {
       </div>
       <div className="flex gap-3">{socialJsx}</div>
       <p className="text-justify">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-        laudantium laborum, pariatur minima, molestiae facilis officiis sed
-        natus eaque esse reprehenderit blanditiis eius ex ut.
+        Highly skilled IT professional with six years professional experience in
+        website development, application development, implementation,
+        deployment, system integration, internal and customer support. Performed
+        several roles as senior developer, team leader.
       </p>
       <div className="flex items-center justify-center gap-6">
-        <button className="border-2 border-main bg-main text-white hover:bg-transparent hover:text-main">
+        <button
+          className="border-2 border-main bg-main text-white hover:bg-transparent hover:text-main"
+          onClick={handleContact}
+        >
           DownLoad CV
         </button>
         <button

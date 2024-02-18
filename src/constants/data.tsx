@@ -1,8 +1,19 @@
 export const socials = [
-  { id: 1, icon: <i className="bx bxl-facebook"></i> },
-  { id: 2, icon: <i className="bx bxl-twitter"></i> },
-  { id: 3, icon: <i className="bx bxl-linkedin"></i> },
-  { id: 4, icon: <i className="bx bxl-instagram"></i> },
+  {
+    id: 1,
+    icon: <i className="bx bxl-twitter"></i>,
+    link: 'https://twitter.com/ScottLee0191',
+  },
+  {
+    id: 2,
+    icon: <i className="bx bxl-linkedin"></i>,
+    link: 'https://www.linkedin.com/in/le-son-85a08999/',
+  },
+  {
+    id: 3,
+    icon: <i className="bx bxl-github"></i>,
+    link: 'https://github.com/scottlee0191',
+  },
 ]
 
 type Item = {
@@ -17,48 +28,48 @@ export type Items = Item[]
 export const experiences: Items = [
   {
     id: 1,
-    duration: '2020 - 2021',
-    title: 'Software Engineer - Meta',
+    duration: '2014 - 2019',
+    title: 'Software Engineer - Soft One',
     description:
-      'Lorem ipsum dolor sit amet consectetur dolor sit amet consectetur dolor sit amet consectetur adipisicing elit. Molestias laudantium laborum, pariatur minima, molestiae.',
+      'Develop responsive UI/UX for web base on the design, implement features, API Integration, Work closely with backend team to integrate api, discuss about some solutions',
   },
   {
     id: 2,
-    duration: '2021 - 2022',
-    title: 'Software Engineer - Google',
+    duration: '2019 - 2023',
+    title: 'Software Engineer - NFQ',
     description:
-      'Lorem ipsum dolor sit amet consectetur dolor sit amet  dolor sit amet consectetur consectetur  adipisicing elit. Molestias laudantium laborum, pariatur minima, molestiae.',
+      'Build system help customer register and validate information via API create Credit Card, work in several e-commerce use Shopware.',
   },
   {
     id: 3,
-    duration: '2022 - current',
-    title: 'Software Engineer - Open AI',
+    duration: '2023 - current',
+    title: 'Software Engineer - FPT',
     description:
-      'Lorem ipsum dolor sit amet consectetur  dolor sit amet consectetur dolor sit amet consecteturadipisicing elit. Molestias laudantium laborum, pariatur minima, molestiae.',
+      'Build admin dashboard manage use information and integration API provide best practice UI/UX, give advise solution and implement to client.',
   },
 ]
 
 export const educations: Items = [
   {
     id: 1,
-    duration: '2015 - 2017',
-    title: 'Bachelor - Harvard',
+    duration: '2009 - 2014',
+    title: 'Bachelor - Da Nang University of Science and Technology',
     description:
-      'Lorem ipsum dolor sit amet consectetur dolor sit amet consectetur dolor sit amet consectetur adipisicing elit. Molestias laudantium laborum, pariatur minima, molestiae.',
+      'Bachelor of Software Engineering in Danang University of Science and Technology, Da Nang city, Viet Nam.',
   },
   {
     id: 2,
-    duration: '2017 - 2019',
-    title: 'Master Degree - MIT',
+    duration: '2013 - 2014',
+    title: 'Developer - Self learning',
     description:
-      'Lorem ipsum dolor sit amet consectetur dolor sit amet  dolor sit amet consectetur consectetur  adipisicing elit. Molestias laudantium laborum, pariatur minima, molestiae.',
+      'Self learning software development and software lifecycle. Involve with several roles like FrontEnd, BackEnd, Tester,...',
   },
   {
     id: 3,
-    duration: '2019 - 2020',
-    title: 'Psd - NASA',
+    duration: '2019 - current',
+    title: 'Senior Developer - Self learning',
     description:
-      'Lorem ipsum dolor sit amet consectetur  dolor sit amet consectetur dolor sit amet consecteturadipisicing elit. Molestias laudantium laborum, pariatur minima, molestiae.',
+      'Build system give advice, solution to client also mentor to help fresher give best practice to them.',
   },
 ]
 
@@ -67,25 +78,25 @@ export const services = [
     id: 1,
     icon: <i className="bx bx-code-alt"></i>,
     name: 'Web Development',
-    description: 'Lorem, elit. Veritatis, necessitatibus?',
+    description: 'Create website with minimum cost!',
   },
   {
     id: 2,
     icon: <i className="bx bxs-paint"></i>,
-    name: 'Creative Design',
-    description: 'Lorem, elit. Veritatis, necessitatibus?',
+    name: 'Design to webpage',
+    description: 'Convert design to webpage!',
   },
   {
     id: 3,
     icon: <i className="bx bx-bar-chart-alt"></i>,
-    name: 'Digital Marketing',
-    description: 'Lorem, elit. Veritatis, necessitatibus?',
+    name: 'Optimize webpage',
+    description: 'Optimize webpage high score!',
   },
   {
     id: 4,
     icon: <i className="bx bx-search-alt-2"></i>,
     name: 'SEO',
-    description: 'Lorem, elit. Veritatis, necessitatibus?',
+    description: 'Build webpage appear on top search!',
   },
 ]
 
@@ -94,10 +105,10 @@ export const skills = [
     id: 1,
     name: 'Front - End',
     data: [
+      { id: 4, name: 'React', icon: <i className="bx bxl-react"></i> },
       { id: 1, name: 'HTML', icon: <i className="bx bxl-html5"></i> },
       { id: 2, name: 'CSS', icon: <i className="bx bxl-css3"></i> },
       { id: 3, name: 'JS', icon: <i className="bx bxl-javascript"></i> },
-      { id: 4, name: 'React', icon: <i className="bx bxl-react"></i> },
       { id: 5, name: 'Vue', icon: <i className="bx bxl-vuejs"></i> },
       {
         id: 6,
@@ -113,7 +124,6 @@ export const skills = [
     data: [
       { id: 1, name: 'Nodejs', icon: <i className="bx bxl-nodejs"></i> },
       { id: 2, name: 'PHP', icon: <i className="bx bxl-php"></i> },
-      { id: 3, name: 'Python', icon: <i className="bx bxl-php"></i> },
       { id: 4, name: 'Java', icon: <i className="bx bxl-java"></i> },
     ],
   },

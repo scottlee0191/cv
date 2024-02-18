@@ -18,8 +18,13 @@
   button {
     @apply rounded px-5 py-2 font-semibold transition;
   }
+
   h2 {
     @apply text-center text-3xl font-bold;
+  }
+
+  h3 {
+    @apply font-bold;
   }
 
   h4 {
